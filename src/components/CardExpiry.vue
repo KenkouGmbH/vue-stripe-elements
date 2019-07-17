@@ -3,10 +3,10 @@
 import Element from './Element'
 
 export default {
-  mixins: [Element],
+  mixins: [{ ...Element }],
   data() {
     return {
-      type: 'card'
+      type: 'cardExpiry'
     }
   }
 }

@@ -9,7 +9,7 @@
   "scripts": {
     "clean": "rm dist/bundle.js",
     "start": "parcel src/index.html",
-    "build-prod": "parcel build src/lib.js"
+    "build": "parcel build src/lib.js"
   },
   "dependencies": {
     "vue": "^2.6.10",

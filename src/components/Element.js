@@ -1,5 +1,3 @@
-import { getElementsInstance } from '../stripe-promise'
-
 export default {
   // please see https://stripe.com/docs/elements/reference for details
   props: {
@@ -17,6 +15,7 @@ export default {
     }
   },
   async mounted() {
+    console.log('mounted', this.type)
     // get stripe elements instance
     const elements = await this.elements
     const options = { ...this.options }

@@ -10,7 +10,6 @@ export default {
     }
   },
   render() {
-    console.log('[ElementS] rendering', this.elements)
     return this.$scopedSlots.default({ elements: this.elements })
   }
 }

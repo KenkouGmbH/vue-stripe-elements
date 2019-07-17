@@ -1,19 +1,20 @@
-let instance = null
+export let instance = null
 let attempts = 0
 const maxAttempts = 100
 
 export const getStripe = (spk = '') =>
   new Promise((resolve, reject) => {
-    if (spk === '') {
-      reject('Stripe spk not set')
-      return
-    }
     // if instance is set, just return it
     if (instance) {
       resolve(instance)
       return
     }
-    // otherwise if Stripe global variable already exist
+    // if there is no key then we can't progress
+    if (spk === '') {
+      reject('Stripe spk not set')
+      return
+    }
+    // if Stripe global variable already exist
     // create the instance and return
     if (window.Stripe) {
       instance = window.Stripe(spk)

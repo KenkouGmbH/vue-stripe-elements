@@ -6,7 +6,7 @@ export default {
   mixins: [Element],
   data() {
     return {
-      type: 'card'
+      type: 'iban'
     }
   }
 }
