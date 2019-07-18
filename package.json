@@ -1,6 +1,6 @@
 {
   "name": "@kenkou/vue-stripe-elements",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "main": "dist/lib.common.js",
   "module": "src/lib.js",
