@@ -9,17 +9,12 @@
 </template>
 
 <script>
-import Vue from 'vue'
 import Elements from './components/Elements'
-import Card from './components/Card'
-import CardNumber from './components/CardNumber'
-import CardCvc from './components/CardCvc'
-import CardExpiry from './components/CardExpiry'
+import { CardNumber, CardCvc, CardExpiry } from './components/Element'
 
 export default {
   components: {
     Elements,
-    Card,
     CardNumber,
     CardCvc,
     CardExpiry

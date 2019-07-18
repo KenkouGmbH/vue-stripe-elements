@@ -1,19 +1,15 @@
-import Vue from 'vue'
 import * as stripePromise from './stripe-promise'
-import CardElement from './components/Card'
-import CardNumberElement from './components/CardNumber'
-import CardCvcElement from './components/CardCvc'
-import CardExpiryElement from './components/CardExpiry'
-import IbanElement from './components/Iban'
-import IdealBankElement from './components/IdealBank'
-import PaymentRequestButtonElement from './components/PaymentRequestButton'
+import * as Element from './components/Element'
+import * as ElementsComponent from './components/Elements'
 
-export const Card = CardElement
-export const CardNumber = CardNumberElement
-export const CardCvc = CardCvcElement
-export const CardExpiry = CardExpiryElement
-export const Iban = IbanElement
-export const IdealBank = IdealBankElement
-export const PaymentRequestButton = PaymentRequestButtonElement
+export const Card = Element.Card
+export const CardNumber = Element.CardNumber
+export const CardCvc = Element.CardCvc
+export const CardExpiry = Element.CardExpiry
+export const Iban = Element.Iban
+export const IdealBank = Element.IdealBank
+export const PaymentRequestButton = Element.PaymentRequestButton
+
+export const Elements = ElementsComponent.default
 
 export const getStripe = stripePromise.getStripe
