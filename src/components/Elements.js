@@ -5,7 +5,9 @@ export default {
   data() {
     return {
       elements: new Promise(resolve => {
-        getStripe(this.spk).then(stripe => resolve(stripe.elements()))
+        getStripe(this.spk).then(stripe => {
+          resolve(stripe.elements())
+        })
       })
     }
   },

@@ -17,7 +17,6 @@ const element = {
     }
   },
   async mounted() {
-    console.log('mounted', this.type)
     // get stripe elements instance
     const elements = await this.elements
     const options = { ...this.options }
@@ -37,6 +36,9 @@ const element = {
     this._element.destroy()
   },
   methods: {
+    element() {
+      return this._element
+    },
     blur() {
       this._element.blur()
     },
@@ -50,7 +52,7 @@ const element = {
       this._element.update()
     }
   },
-  render(h, context) {
+  render(h) {
     return h('div')
   }
 }
