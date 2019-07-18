@@ -1,10 +1,22 @@
 {
   "name": "@kenkou/vue-stripe-elements",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "main": "dist/lib.common.js",
   "module": "src/lib.js",
   "unpkg": "dist/lib.umd.js",
+  "keywords": [
+    "vue",
+    "stripe",
+    "elements",
+    "payment"
+  ],
+  "author": {
+    "url": "https://www.kenkou.de",
+    "name": "Kenkou GmbH"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/KenkouGmbH/vue-stripe-elements",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name lib src/lib.js",

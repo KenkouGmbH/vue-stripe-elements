@@ -1,3 +1,6 @@
+[![NPM](https://nodei.co/npm/@kenkou/vue-stripe-elements.png)](https://nodei.co/npm/@kenkou/vue-stripe-elements/)
+[![npm](https://img.shields.io/npm/dm/@kenkou/vue-stripe-elements.svg?style=flat-square)](https://www.npmjs.com/package/@kenkou/vue-stripe-elements)
+
 # @kenkou/vue-stripe-elements
 
 A Vue wrapper for stripe elements. This library was inspired in [fromAtoB/vue-stripe-elements](https://github.com/fromatob/vue-stripe-elements), but has the following improvements:
@@ -56,6 +59,14 @@ export default {
 
 See `src/App.vue` for a complete example.
 
+## Live demo
+
+We got a free demo for you!
+
+[![Edit Vue Template](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/vue-template-7wqy3?fontsize=14)
+
+Remember to set the `spk` value inside `data()` function.
+
 ## Building and running on localhost
 
 First install dependencies:
@@ -64,7 +75,7 @@ First install dependencies:
 yarn install
 ```
 
-To run in hot module reloading mode:
+To run `App.vue` example:
 
 ```sh
 yarn serve
