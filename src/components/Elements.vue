@@ -4,10 +4,8 @@
   </div>
 </template>
 <script>
-import { getStripe } from '../stripe-promise'
-
 export default {
-  props: { spk: { type: String, required: true } },
+  inject: ['stripe'],
   provide() {
     return {
       elements: this.elements
@@ -16,16 +14,11 @@ export default {
   data() {
     return {
       elements: new Promise(resolve => {
-        getStripe(this.spk).then(stripe => {
+        this.stripe.then(stripe => {
           resolve(stripe.elements())
         })
       })
     }
   }
-  /*functional: true,
-  render(h, context) {
-    console.log('context', context)
-    return h('div', context.data, context.children)
-  }*/
 }
 </script>

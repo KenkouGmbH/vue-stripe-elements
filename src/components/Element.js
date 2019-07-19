@@ -4,10 +4,6 @@ const element = {
   inject: ['elements'],
   // please see https://stripe.com/docs/elements/reference for details
   props: {
-    /*elements: {
-      type: Promise, // stripe elements promise
-      required: true
-    },*/
     value: {
       type: String,
       required: false
@@ -22,7 +18,7 @@ const element = {
     const elements = await this.elements
     const options = { ...this.options }
     options.style = { ...baseStyle, ...options.style }
-    this._element = elements.create(this.type, this.spk, options)
+    this._element = elements.create(this.type, options)
     this._element.on('blur', () => this.$emit('blur'))
     this._element.on('change', event => this.$emit('change', event))
     this._element.on('click', event => this.$emit('click', event))

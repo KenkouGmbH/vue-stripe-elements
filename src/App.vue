@@ -1,22 +1,38 @@
 <template>
-  <Elements :spk="spk">
-    <card-number ref="cardNumber" :options="stripeOptions" @change="number = $event.complete"></card-number>
-    <card-cvc ref="cardCvc" :options="stripeOptions" @change="cvc = $event.complete"></card-cvc>
-    <card-expiry ref="cardExpiry" :options="stripeOptions" @change="expiry = $event.complete"></card-expiry>
-    <button @click="tokenize">get token</button>
-    <div>{{ token }}</div>
-  </Elements>
+  <Stripe :spk="spk">
+    <Elements>
+      <card-number ref="cardNumber" :options="stripeOptions" @change="number = $event.complete"></card-number>
+      <card-expiry ref="cardExpiry" :options="stripeOptions" @change="expiry = $event.complete"></card-expiry>
+      <card-cvc ref="cardCvc" :options="stripeOptions" @change="cvc = $event.complete"></card-cvc>
+      <button @click="tokenize">get token</button>
+      <div>{{ token }}</div>
+    </Elements>
+    <div>example of IBAN</div>
+    <Elements>
+      <Iban :options="{ supportedCountries: ['SEPA'] }" />
+    </Elements>
+  </Stripe>
 </template>
 
 <script>
-import { Elements, CardNumber, CardCvc, CardExpiry, getStripe } from './lib'
+import {
+  Stripe,
+  Elements,
+  CardNumber,
+  CardCvc,
+  CardExpiry,
+  Iban,
+  getStripe
+} from './lib'
 
 export default {
   components: {
+    Stripe,
     Elements,
     CardNumber,
     CardCvc,
-    CardExpiry
+    CardExpiry,
+    Iban
   },
   methods: {
     async tokenize() {
