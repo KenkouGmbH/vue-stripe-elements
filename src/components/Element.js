@@ -1,12 +1,13 @@
 import Vue from 'vue'
 
 const element = {
+  inject: ['elements'],
   // please see https://stripe.com/docs/elements/reference for details
   props: {
-    elements: {
+    /*elements: {
       type: Promise, // stripe elements promise
       required: true
-    },
+    },*/
     value: {
       type: String,
       required: false

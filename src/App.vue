@@ -1,27 +1,10 @@
 <template>
   <Elements :spk="spk">
-    <div slot-scope="{ elements }">
-      <card-number
-        :elements="elements"
-        ref="cardNumber"
-        :options="stripeOptions"
-        @change="number = $event.complete"
-      ></card-number>
-      <card-cvc
-        :elements="elements"
-        ref="cardCvc"
-        :options="stripeOptions"
-        @change="cvc = $event.complete"
-      ></card-cvc>
-      <card-expiry
-        :elements="elements"
-        ref="cardExpiry"
-        :options="stripeOptions"
-        @change="expiry = $event.complete"
-      ></card-expiry>
-      <button @click="tokenize">get token</button>
-      <div>{{ token }}</div>
-    </div>
+    <card-number ref="cardNumber" :options="stripeOptions" @change="number = $event.complete"></card-number>
+    <card-cvc ref="cardCvc" :options="stripeOptions" @change="cvc = $event.complete"></card-cvc>
+    <card-expiry ref="cardExpiry" :options="stripeOptions" @change="expiry = $event.complete"></card-expiry>
+    <button @click="tokenize">get token</button>
+    <div>{{ token }}</div>
   </Elements>
 </template>
 

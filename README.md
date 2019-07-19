@@ -26,17 +26,15 @@ Stripe official javascript library `stripe.js` `v3` will be automatically inject
 
 ```js
 <Elements spk="pk_test_xxxxxxxxxxxxxxxxx">
-  <div slot-scope="{ elements }">
-    <card-number :elements="elements" ref="cardNumber"></card-number>
-    ...
-    <card-cvc :elements="elements" ref="cardCvc"></card-cvc>
-    ...
-    <card-expiry :elements="elements" ref="cardExpiry"></card-expiry>
-  </div>
+  <card-number ref="cardNumber" />
+  ...
+  <card-cvc />
+  ...
+  <card-expiry />
 </Elements>
 ```
 
-Notice the usage of `slot-scope="{ elements }"`, which makes the `elements = stripe.elements(options)` variable available for the children. To access the stripe element created in each component call the `element()` method. To access the stripe instance use `getStripe` to get a promise to it. For example, to tokenize a card do:
+To access the stripe element created in each component call the `element()` method. To access the stripe instance use `getStripe` to get a promise to it. For example, to tokenize a card do:
 
 ```js
 <script>
