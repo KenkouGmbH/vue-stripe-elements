@@ -22,16 +22,20 @@ yarn add @kenkou/vue-stripe-elements
 
 ## Usage
 
-Stripe official javascript library `stripe.js` `v3` will be automatically injected if `window.Stripe` global variable is not set. Elements should be wrapped inside an `<Elements>` component as shown below.
+Stripe official javascript library `stripe.js` `v3` will be automatically injected if `window.Stripe` global variable is not set.
 
 ```js
-<Elements spk="pk_test_xxxxxxxxxxxxxxxxx">
-  <card-number ref="cardNumber" />
+<Stripe spk="pk_test_xxxxxxxxxxxxxxxxx">
   ...
-  <card-cvc />
+  <Elements>
+    <card-number ref="cardNumber" />
+    ...
+    <card-cvc />
+    ...
+    <card-expiry />
+  </Elements>
   ...
-  <card-expiry />
-</Elements>
+</Stripe>
 ```
 
 To access the stripe element created in each component call the `element()` method. To access the stripe instance use `getStripe` to get a promise to it. For example, to tokenize a card do:
