@@ -1,6 +1,6 @@
 {
   "name": "@kenkou/vue-stripe-elements",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": false,
   "main": "dist/lib.common.js",
   "module": "src/lib.js",
@@ -20,7 +20,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name lib src/lib.js",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint --fix"
   },
   "dependencies": {
     "core-js": "^2.6.5",
